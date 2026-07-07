@@ -26,7 +26,11 @@ export const cars: Car[] = [
     transmision: "Manual",
     descripcion:
       "Réplica fiel del icónico Ford Mustang Shelby GT500 \"Eleanor\". Base Mustang clásico, motor V8, con reconstrucción integral de chapa, pintura y mecánica: el coche sale de nuestro taller en estado de kilómetro 0. Pintura gris antracita mate con bandas Le Mans negras y llantas estilo Shelby.",
-    fotos: ["/images/eleanor/eleanor-front.jpg", "/images/eleanor/eleanor-detail.jpg"],
+    fotos: [
+      "/images/eleanor/eleanor-cover.png",
+      "/images/eleanor/eleanor-front.jpg",
+      "/images/eleanor/eleanor-detail.jpg",
+    ],
     destacado: true,
     tipo: "stock",
     esReplica: true,

@@ -43,14 +43,17 @@ export default function PhotoGallery({
 
       {openIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
           onClick={() => setOpenIndex(null)}
         >
           <button
             type="button"
             aria-label="Cerrar"
-            onClick={() => setOpenIndex(null)}
-            className="absolute right-4 top-4 text-3xl text-white"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenIndex(null);
+            }}
+            className="absolute right-2 top-2 flex h-12 w-12 items-center justify-center rounded-full text-3xl text-white active:bg-white/20 sm:right-4 sm:top-4"
           >
             ×
           </button>
@@ -63,7 +66,7 @@ export default function PhotoGallery({
                 e.stopPropagation();
                 showPrev();
               }}
-              className="absolute left-4 text-4xl text-white"
+              className="absolute left-2 flex h-12 w-12 items-center justify-center rounded-full text-4xl text-white active:bg-white/20 sm:left-4"
             >
               ‹
             </button>
@@ -90,7 +93,7 @@ export default function PhotoGallery({
                 e.stopPropagation();
                 showNext();
               }}
-              className="absolute right-4 text-4xl text-white"
+              className="absolute right-2 flex h-12 w-12 items-center justify-center rounded-full text-4xl text-white active:bg-white/20 sm:right-4"
             >
               ›
             </button>
