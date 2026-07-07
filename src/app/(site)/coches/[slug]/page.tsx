@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getCarBySlug } from "@/lib/cars-repo";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export const dynamic = "force-dynamic";
 
@@ -19,19 +19,7 @@ export default async function CocheDetailPage({
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-        <div className="grid grid-cols-2 gap-3">
-          {car.fotos.map((foto) => (
-            <div key={foto} className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
-                src={foto}
-                alt={car.titulo}
-                fill
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        <PhotoGallery fotos={car.fotos} alt={car.titulo} />
         <div>
           {car.esReplica && (
             <span className="inline-block rounded bg-rs-gray px-2 py-1 text-xs font-medium text-rs-muted">
