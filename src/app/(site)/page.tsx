@@ -48,7 +48,7 @@ export default async function Home() {
               href="/transporters"
               className="rounded-md border border-rs-gray-light px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white"
             >
-              Transporters a medida
+              VW Transporter a medida
             </Link>
           </div>
         </div>
