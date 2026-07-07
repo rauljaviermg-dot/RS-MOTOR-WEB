@@ -71,22 +71,54 @@ export default async function Home() {
       <section className="border-t border-rs-gray-light bg-rs-gray">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-center font-heading text-3xl font-medium text-white sm:text-4xl">
-            ¿Por qué comprar en RS-Motor?
+            ¿Por qué RS-Motor?
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3">
             <div className="flex flex-col items-center text-center">
-              <div className="flex h-20 w-20 flex-col items-center justify-center rounded-full bg-rs-red leading-none text-white">
-                <span className="font-heading text-3xl font-semibold">1</span>
-                <span className="text-[10px] font-medium uppercase tracking-widest">
-                  año
-                </span>
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-rs-red text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-9 w-9"
+                >
+                  <circle cx="10.5" cy="10.5" r="6.5" />
+                  <path d="m20 20-4.8-4.8" strokeLinecap="round" />
+                </svg>
               </div>
               <h3 className="mt-5 font-heading text-xl font-medium text-white">
-                Garantía de verdad
+                Selección del vehículo
               </h3>
               <p className="mt-2 text-sm text-rs-muted">
-                Cada coche que sale de RS-Motor lleva 1 año de garantía
-                mecánica cubierta por nosotros, sin letra pequeña.
+                Buscamos cada coche en origen, en distintos países de
+                Europa, y lo revisamos antes de traerlo a Málaga listo
+                para conducir.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-rs-red text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-9 w-9"
+                >
+                  <path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
+                  <path d="M9 12h6M9 16h6M9 8h2" strokeLinecap="round" />
+                </svg>
+              </div>
+              <h3 className="mt-5 font-heading text-xl font-medium text-white">
+                Certificado de estado
+              </h3>
+              <p className="mt-2 text-sm text-rs-muted">
+                Te damos toda la información del vehículo, con kilometraje
+                certificado y 1 año de garantía mecánica incluida en el
+                precio.
               </p>
             </div>
 
@@ -101,38 +133,16 @@ export default async function Home() {
                   className="h-9 w-9"
                 >
                   <circle cx="12" cy="12" r="9" />
-                  <path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z" />
+                  <path d="M9 10h.01M15 10h.01M8.5 15c1 1 2.2 1.5 3.5 1.5s2.5-.5 3.5-1.5" strokeLinecap="round" />
                 </svg>
               </div>
               <h3 className="mt-5 font-heading text-xl font-medium text-white">
-                Traídos desde Europa
+                Satisfacción del cliente
               </h3>
               <p className="mt-2 text-sm text-rs-muted">
-                Buscamos y seleccionamos cada unidad en distintos países
-                antes de traerla a Málaga, revisada y lista para rodar.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-rs-red text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  className="h-9 w-9"
-                >
-                  <path d="m14.5 3.5 6 6L9 21H3v-6L14.5 3.5Z" />
-                  <path d="m12.5 5.5 6 6" />
-                </svg>
-              </div>
-              <h3 className="mt-5 font-heading text-xl font-medium text-white">
-                Transporter a tu gusto
-              </h3>
-              <p className="mt-2 text-sm text-rs-muted">
-                En nuestros VW Transporter tocamos pintura y mecánica desde
-                cero, según cómo lo quiera el comprador.
+                Llevamos años trayendo e importando coches de toda Europa.
+                Esa experiencia es la que nos permite ofrecerte siempre la
+                mejor opción.
               </p>
             </div>
           </div>
