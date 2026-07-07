@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { sendContactMessage } from "./actions";
 
 export const metadata = {
@@ -12,12 +13,26 @@ export default async function ContactoPage({
   const { enviado, error } = await searchParams;
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
-      <h1 className="font-heading text-4xl font-semibold text-white">
-        Contacto
-      </h1>
+    <div>
+      <section className="relative flex min-h-[40vh] items-center overflow-hidden border-b border-rs-gray-light">
+        <Image
+          src="/images/contacto/hero.png"
+          alt="Atención al cliente RS-Motor"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <h1 className="font-heading text-5xl font-semibold text-white">
+            Contacto
+          </h1>
+        </div>
+      </section>
 
-      <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
           <p className="leading-relaxed text-rs-muted">
             Bienvenido a RS-Motor, tu concesionario en Málaga. Contamos con
@@ -113,6 +128,7 @@ export default async function ContactoPage({
             </button>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );
