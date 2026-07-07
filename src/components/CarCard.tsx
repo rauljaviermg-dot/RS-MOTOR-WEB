@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Car } from "@/lib/cars";
-import BitcoinBadge from "./BitcoinBadge";
 
 export default function CarCard({ car }: { car: Car }) {
   return (
@@ -22,7 +21,6 @@ export default function CarCard({ car }: { car: Car }) {
             Réplica
           </span>
         )}
-        <BitcoinBadge />
       </div>
       <div className="p-4">
         <h3 className="font-heading text-lg font-medium text-white">{car.titulo}</h3>
