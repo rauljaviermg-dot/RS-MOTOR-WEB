@@ -24,11 +24,11 @@ export default async function Home() {
         <RacingStripes className="opacity-70 mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <p className="text-sm font-medium uppercase tracking-widest text-rs-red">
-            Málaga · Importación europea
+          <p className="text-sm font-medium uppercase tracking-widest text-white">
+            Málaga
           </p>
           <h1 className="mt-4 max-w-2xl font-heading text-5xl font-semibold leading-tight text-white sm:text-6xl">
-            Coches importados, garantía real, reformas a medida.
+            Tu próximo coche, con toda la garantía.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-rs-muted">
             Traemos vehículos de toda Europa y los preparamos con 1 año de
@@ -40,7 +40,7 @@ export default async function Home() {
               href="/coches"
               className="rounded-md bg-rs-red px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105"
             >
-              Ver catálogo
+              Ver Stock
             </Link>
             <Link
               href="/transporters"

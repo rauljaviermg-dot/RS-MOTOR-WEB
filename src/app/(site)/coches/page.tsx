@@ -4,7 +4,7 @@ import CarCard from "@/components/CarCard";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Catálogo | RS-Motor",
+  title: "Stock | RS-Motor",
 };
 
 export default async function CochesPage() {
@@ -13,7 +13,7 @@ export default async function CochesPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
       <h1 className="font-heading text-4xl font-semibold text-white">
-        Catálogo
+        Stock
       </h1>
       <p className="mt-3 text-rs-muted">
         Todos nuestros vehículos incluyen 1 año de garantía.

@@ -6,8 +6,8 @@ import Logo from "./Logo";
 
 const links = [
   { href: "/", label: "Inicio" },
-  { href: "/coches", label: "Catálogo" },
-  { href: "/transporters", label: "Transporters" },
+  { href: "/coches", label: "Stock" },
+  { href: "/transporters", label: "VW Transporter" },
   { href: "/contacto", label: "Contacto" },
 ];
 
