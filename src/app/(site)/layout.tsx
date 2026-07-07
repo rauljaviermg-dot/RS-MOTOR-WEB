@@ -1,0 +1,20 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { hasActiveSession } from "@/app/admin/actions";
+import { firebaseAdminConfigured } from "@/lib/firebase/admin";
+
+export default async function SiteLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const isAdmin = firebaseAdminConfigured ? await hasActiveSession() : false;
+
+  return (
+    <>
+      <Header isAdmin={isAdmin} />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </>
+  );
+}
