@@ -13,7 +13,6 @@ export default async function Home() {
   return (
     <div>
       <section className="relative flex min-h-[85vh] items-center overflow-hidden border-b border-rs-gray-light">
-        <RacingStripes />
         <Image
           src="/images/eleanor/eleanor-front.jpg"
           alt="Ford Mustang Shelby GT500 réplica Eleanor en RS-Motor"
@@ -22,6 +21,7 @@ export default async function Home() {
           sizes="100vw"
           className="object-cover opacity-40"
         />
+        <RacingStripes className="opacity-70 mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
         <div className="relative mx-auto max-w-6xl px-6">
           <p className="text-sm font-medium uppercase tracking-widest text-rs-red">
