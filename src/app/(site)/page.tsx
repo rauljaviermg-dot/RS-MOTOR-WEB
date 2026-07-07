@@ -31,9 +31,11 @@ export default async function Home() {
             Tu próximo coche, con toda la garantía.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-rs-muted">
-            Traemos vehículos de toda Europa y los preparamos con 1 año de
-            garantía. Especialistas en reformas integrales de VW Transporter,
-            pintura y mecánica desde cero.
+            En RS-Motor llevamos 20 años acompañando a quienes buscan su
+            próximo coche. Comprar uno de ocasión con nosotros es tan
+            seguro como comprarlo nuevo, porque revisamos cada vehículo a
+            fondo para asegurarnos de que cumple con nuestros niveles de
+            calidad. Tu tranquilidad es lo primero.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
