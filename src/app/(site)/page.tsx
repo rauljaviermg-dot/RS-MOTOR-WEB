@@ -92,9 +92,11 @@ export default async function Home() {
                 Selección del vehículo
               </h3>
               <p className="mt-2 text-sm text-rs-muted">
-                Buscamos cada coche en origen, en distintos países de
-                Europa, y lo revisamos antes de traerlo a Málaga listo
-                para conducir.
+                La mayor parte de nuestros vehículos proceden de
+                concesionario oficial y son seleccionados por
+                profesionales. Antes de la entrega les realizamos una
+                inspección en 100 puntos para ofrecer a nuestros clientes
+                la máxima garantía y calidad.
               </p>
             </div>
 
@@ -116,9 +118,11 @@ export default async function Home() {
                 Certificado de estado
               </h3>
               <p className="mt-2 text-sm text-rs-muted">
-                Te damos toda la información del vehículo, con kilometraje
-                certificado y 1 año de garantía mecánica incluida en el
-                precio.
+                Facilitamos la máxima información a nuestros clientes:
+                todos nuestros vehículos disponen de historial de
+                mantenimiento, certificado de kilometraje y no
+                siniestralidad. Además, cada coche incluye 1 año de
+                garantía mecánica.
               </p>
             </div>
 
@@ -140,9 +144,10 @@ export default async function Home() {
                 Satisfacción del cliente
               </h3>
               <p className="mt-2 text-sm text-rs-muted">
-                Llevamos años trayendo e importando coches de toda Europa.
-                Esa experiencia es la que nos permite ofrecerte siempre la
-                mejor opción.
+                En RS-Motor llevamos más de 20 años comprando y vendiendo
+                coches de segunda mano. Nuestra experiencia es el aval
+                que nos permite dar la mejor respuesta a las necesidades
+                de cada cliente.
               </p>
             </div>
           </div>
