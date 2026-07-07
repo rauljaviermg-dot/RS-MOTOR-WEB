@@ -14,12 +14,12 @@ export default async function Home() {
     <div>
       <section className="relative flex min-h-[85vh] items-center overflow-hidden border-b border-rs-gray-light">
         <Image
-          src="/images/eleanor/eleanor-front.jpg"
-          alt="Ford Mustang Shelby GT500 réplica Eleanor en RS-Motor"
+          src="/images/hero/concesionario.png"
+          alt="Concesionario RS-Motor con vehículos en exposición"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-40"
+          className="object-cover object-[center_25%] opacity-40"
         />
         <RacingStripes className="opacity-70 mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
