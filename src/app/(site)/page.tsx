@@ -75,7 +75,7 @@ export default async function Home() {
           <h2 className="text-center font-heading text-3xl font-medium text-white sm:text-4xl">
             ¿Por qué RS-Motor?
           </h2>
-          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col items-center text-center">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-rs-red text-white">
                 <svg
@@ -150,6 +150,30 @@ export default async function Home() {
                 coches de segunda mano. Nuestra experiencia es el aval
                 que nos permite dar la mejor respuesta a las necesidades
                 de cada cliente.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-rs-red text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-9 w-9"
+                >
+                  <path d="M12 3 8.5 9.5 2 11l4.6 4.3L5.5 21 12 17.8 18.5 21l-1.1-5.7L22 11l-6.5-1.5Z" />
+                </svg>
+              </div>
+              <h3 className="mt-5 font-heading text-xl font-medium text-white">
+                Detailing
+              </h3>
+              <p className="mt-2 text-sm text-rs-muted">
+                Contamos con un experimentado equipo en detallado para dar
+                el máximo cuidado a nuestros vehículos: corrección de
+                pintura, tratamientos cerámicos, y tratamientos de piel y
+                plásticos interiores.
               </p>
             </div>
           </div>

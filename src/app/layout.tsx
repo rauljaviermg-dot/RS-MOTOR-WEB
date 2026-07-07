@@ -13,10 +13,27 @@ const oswald = Oswald({
   weight: ["500", "600", "700"],
 });
 
+const title = "RS-Motor | 20 años acompañando a quienes buscan su próximo coche.";
+const description =
+  "Nuestra experiencia es el aval que nos permite dar la mejor respuesta a las necesidades de cada cliente.";
+
 export const metadata: Metadata = {
-  title: "RS-Motor | Coches de importación con garantía en Málaga",
-  description:
-    "Compra venta de vehículos de importación europea con 1 año de garantía. Especialistas en reformas VW Transporter a medida.",
+  metadataBase: new URL("https://rsmotormalaga.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://rsmotormalaga.com",
+    siteName: "RS-Motor",
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
