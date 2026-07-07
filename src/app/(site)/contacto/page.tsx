@@ -20,9 +20,10 @@ export default async function ContactoPage({
       <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
           <p className="leading-relaxed text-rs-muted">
-            Bienvenido a RS-Motor, tu concesionario de coches de importación
-            en Málaga. Nuestro equipo te acompaña para encontrar el coche
-            que necesitas, con toda la garantía y sin sorpresas.
+            Bienvenido a RS-Motor, tu concesionario en Málaga. Contamos con
+            vehículos de todas las gamas y nuestro equipo te acompaña para
+            encontrar el coche que necesitas, con toda la garantía y sin
+            sorpresas.
           </p>
 
           <div className="mt-8 space-y-1">
