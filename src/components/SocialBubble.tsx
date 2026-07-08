@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SocialBubble() {
   return (
     <div className="fixed bottom-4 left-4 z-40 flex flex-col gap-2">
@@ -24,14 +26,9 @@ export default function SocialBubble() {
       <a
         href="#"
         aria-label="Wallapop"
-        className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#3FE6C9] to-[#00B876] text-white shadow-sm transition-transform hover:scale-110"
+        className="relative block h-11 w-11 overflow-hidden rounded-full shadow-sm transition-transform hover:scale-110"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" className="h-5 w-5">
-          <circle cx="9.5" cy="8.5" r="4.3" />
-          <circle cx="14.7" cy="9.3" r="4" />
-          <circle cx="8.2" cy="14.2" r="3.7" />
-          <circle cx="13.6" cy="15" r="3.6" />
-        </svg>
+        <Image src="/wallapop.png" alt="Wallapop" fill sizes="44px" className="object-cover" />
       </a>
     </div>
   );
