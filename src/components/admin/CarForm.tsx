@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import type { Car } from "@/lib/cars";
 
 const inputClass =
@@ -11,6 +14,15 @@ export default function CarForm({
   action: (formData: FormData) => void;
   car?: Car;
 }) {
+  const [previews, setPreviews] = useState<string[]>([]);
+
+  function handleFotosChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setPreviews((prev) => {
+      prev.forEach((url) => URL.revokeObjectURL(url));
+      return Array.from(e.target.files ?? []).map((file) => URL.createObjectURL(file));
+    });
+  }
+
   return (
     <form action={action} className="mt-8 flex flex-col gap-5">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -78,8 +90,29 @@ export default function CarForm({
         <span className={labelClass}>
           {car ? "Añadir más fotos" : "Fotos"}
         </span>
-        <input type="file" name="fotos" accept="image/*" multiple className={inputClass} />
+        <input
+          type="file"
+          name="fotos"
+          accept="image/*"
+          multiple
+          onChange={handleFotosChange}
+          className={inputClass}
+        />
       </label>
+
+      {previews.length > 0 && (
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+          {previews.map((url, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={url}
+              src={url}
+              alt={`Foto seleccionada ${i + 1}`}
+              className="aspect-square w-full rounded-md border border-rs-gray-light object-cover"
+            />
+          ))}
+        </div>
+      )}
 
       <div className="flex gap-6">
         <label className="flex items-center gap-2 text-sm text-white">

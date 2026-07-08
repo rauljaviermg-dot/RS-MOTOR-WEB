@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { getFirebaseAuth } from "@/lib/firebase/client";
 import { createSession } from "@/app/admin/actions";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -35,7 +35,7 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6">
       <div className="w-full max-w-sm">
-        <Logo className="text-2xl" />
+        <Image src="/logo.png" alt="RS.MOTOR" width={2172} height={724} className="h-10 w-auto" />
         <h1 className="mt-6 font-heading text-2xl font-medium text-white">
           Acceso al panel
         </h1>

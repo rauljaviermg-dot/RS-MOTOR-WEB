@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 import { logout, requireSession } from "@/app/admin/actions";
 import { firebaseAdminConfigured } from "@/lib/firebase/admin";
 
@@ -17,7 +17,7 @@ export default async function AdminLayout({
       <header className="border-b border-rs-gray-light">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link href="/">
-            <Logo className="text-lg" />
+            <Image src="/logo.png" alt="RS.MOTOR" width={2172} height={724} className="h-8 w-auto" />
           </Link>
           <div className="flex items-center gap-6">
             <Link
