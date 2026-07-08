@@ -1,10 +1,10 @@
-import Logo from "./Logo";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="border-t border-rs-gray-light bg-rs-gray">
       <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-rs-muted">
-        <Logo className="text-lg" />
+        <Image src="/logo.png" alt="RS.MOTOR" width={2172} height={724} className="h-8 w-auto" />
         <p className="mt-4">
           Málaga · Coches de importación europea con 1 año de garantía.
         </p>

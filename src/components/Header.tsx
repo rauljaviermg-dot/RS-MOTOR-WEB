@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Logo from "./Logo";
+import Image from "next/image";
 
 const links = [
   { href: "/", label: "Inicio" },
@@ -18,7 +18,7 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
     <header className="sticky top-0 z-50 border-b border-rs-gray-light bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" onClick={() => setOpen(false)}>
-          <Logo className="text-xl" />
+          <Image src="/logo.png" alt="RS.MOTOR" width={2172} height={724} className="h-9 w-auto" priority />
         </Link>
         <nav className="hidden gap-8 text-sm text-rs-muted sm:flex">
           {links.map((link) => (
