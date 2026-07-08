@@ -44,9 +44,10 @@ export default async function Home() {
             </Link>
             <Link
               href="/transporters"
-              className="rounded-md border border-rs-gray-light px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white"
+              className="inline-flex items-center gap-2 rounded-md border border-rs-gray-light px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white"
             >
-              VW Transporter a medida
+              <Image src="/vw-logo.png" alt="VW" width={447} height={447} className="h-5 w-5" />
+              Transporter a medida
             </Link>
           </div>
         </div>

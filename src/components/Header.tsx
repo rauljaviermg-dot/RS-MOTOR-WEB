@@ -7,9 +7,21 @@ import Image from "next/image";
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/coches", label: "Stock" },
-  { href: "/transporters", label: "VW Transporter" },
+  { href: "/transporters", label: "Transporter" },
   { href: "/contacto", label: "Contacto" },
 ];
+
+function LinkLabel({ href, label }: { href: string; label: string }) {
+  if (href === "/transporters") {
+    return (
+      <span className="inline-flex items-center gap-1.5">
+        <Image src="/vw-logo.png" alt="VW" width={447} height={447} className="h-4 w-4" />
+        {label}
+      </span>
+    );
+  }
+  return label;
+}
 
 export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -27,7 +39,7 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
               href={link.href}
               className="transition-colors hover:text-white"
             >
-              {link.label}
+              <LinkLabel href={link.href} label={link.label} />
             </Link>
           ))}
           {isAdmin && (
@@ -64,7 +76,7 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
               onClick={() => setOpen(false)}
               className="py-2 transition-colors hover:text-white"
             >
-              {link.label}
+              <LinkLabel href={link.href} label={link.label} />
             </Link>
           ))}
           {isAdmin && (
