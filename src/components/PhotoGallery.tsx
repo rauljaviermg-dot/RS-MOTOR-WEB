@@ -53,7 +53,7 @@ export default function PhotoGallery({
               e.stopPropagation();
               setOpenIndex(null);
             }}
-            className="absolute right-2 top-2 flex h-12 w-12 items-center justify-center rounded-full text-3xl text-white active:bg-white/20 sm:right-4 sm:top-4"
+            className="absolute right-2 top-2 z-10 flex h-12 w-12 touch-manipulation items-center justify-center rounded-full text-3xl text-white active:bg-white/20 sm:right-4 sm:top-4"
           >
             ×
           </button>
@@ -66,7 +66,7 @@ export default function PhotoGallery({
                 e.stopPropagation();
                 showPrev();
               }}
-              className="absolute left-2 flex h-12 w-12 items-center justify-center rounded-full text-4xl text-white active:bg-white/20 sm:left-4"
+              className="absolute left-2 z-10 flex h-12 w-12 touch-manipulation items-center justify-center rounded-full text-4xl text-white active:bg-white/20 sm:left-4"
             >
               ‹
             </button>
@@ -93,7 +93,7 @@ export default function PhotoGallery({
                 e.stopPropagation();
                 showNext();
               }}
-              className="absolute right-2 flex h-12 w-12 items-center justify-center rounded-full text-4xl text-white active:bg-white/20 sm:right-4"
+              className="absolute right-2 z-10 flex h-12 w-12 touch-manipulation items-center justify-center rounded-full text-4xl text-white active:bg-white/20 sm:right-4"
             >
               ›
             </button>
