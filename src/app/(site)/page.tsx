@@ -14,15 +14,16 @@ export default async function Home() {
     <div>
       <section className="relative flex min-h-[85vh] items-center overflow-hidden border-b border-rs-gray-light">
         <Image
-          src="/images/hero/concesionario.png"
+          src="/images/hero/fondo-2.png"
           alt="Concesionario RS-Motor con vehículos en exposición"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_25%] opacity-40"
+          className="object-cover object-[80%_15%] opacity-45"
         />
         <RacingStripes className="opacity-70 mix-blend-screen" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-6">
           <p className="text-sm font-medium uppercase tracking-widest text-white">
             Málaga
@@ -31,11 +32,8 @@ export default async function Home() {
             Tu próximo coche, con toda la garantía.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-rs-muted">
-            En RS-Motor llevamos 20 años acompañando a quienes buscan su
-            próximo coche. Comprar uno de ocasión con nosotros es tan
-            seguro como comprarlo nuevo, porque revisamos cada vehículo a
-            fondo para asegurarnos de que cumple con nuestros niveles de
-            calidad. Tu tranquilidad es lo primero.
+            20 años de experiencia son el aval que nos permite dar la
+            mejor respuesta a cada cliente. Tu tranquilidad es lo primero.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
