@@ -26,9 +26,11 @@ export default function SocialBubble() {
       <a
         href="#"
         aria-label="Wallapop"
-        className="relative block h-11 w-11 overflow-hidden rounded-full shadow-sm transition-transform hover:scale-110"
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#3FE6C9] to-[#00B876] shadow-sm transition-transform hover:scale-110"
       >
-        <Image src="/wallapop.png" alt="Wallapop" fill sizes="44px" className="object-cover" />
+        <div className="relative h-6 w-6 overflow-hidden rounded-full">
+          <Image src="/wallapop.png" alt="Wallapop" fill sizes="24px" className="object-cover" />
+        </div>
       </a>
     </div>
   );
