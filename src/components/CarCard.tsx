@@ -16,11 +16,6 @@ export default function CarCard({ car }: { car: Car }) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {car.esReplica && (
-          <span className="absolute left-3 top-3 rounded bg-black/70 px-2 py-1 text-xs font-medium text-white">
-            Réplica
-          </span>
-        )}
       </div>
       <div className="p-4">
         <h3 className="font-heading text-lg font-medium text-white">{car.titulo}</h3>

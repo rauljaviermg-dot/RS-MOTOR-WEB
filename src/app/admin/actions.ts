@@ -103,7 +103,6 @@ export async function createCar(formData: FormData) {
     fotos: nuevasFotos,
     destacado: formData.get("destacado") === "on",
     tipo: String(formData.get("tipo") ?? "stock"),
-    esReplica: formData.get("es_replica") === "on",
     createdAt: Date.now(),
   });
 
@@ -137,7 +136,6 @@ export async function updateCar(slug: string, formData: FormData) {
     fotos: fotosFinales,
     destacado: formData.get("destacado") === "on",
     tipo: String(formData.get("tipo") ?? "stock"),
-    esReplica: formData.get("es_replica") === "on",
   });
 
   revalidatePath("/");

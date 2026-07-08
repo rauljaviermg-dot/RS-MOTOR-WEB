@@ -119,10 +119,6 @@ export default function CarForm({
           <input type="checkbox" name="destacado" defaultChecked={car?.destacado} />
           Destacado en portada
         </label>
-        <label className="flex items-center gap-2 text-sm text-white">
-          <input type="checkbox" name="es_replica" defaultChecked={car?.esReplica} />
-          Es réplica/recreación
-        </label>
       </div>
 
       <button

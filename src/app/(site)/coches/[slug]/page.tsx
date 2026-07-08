@@ -21,12 +21,7 @@ export default async function CocheDetailPage({
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
         <PhotoGallery fotos={car.fotos} alt={car.titulo} />
         <div>
-          {car.esReplica && (
-            <span className="inline-block rounded bg-rs-gray px-2 py-1 text-xs font-medium text-rs-muted">
-              Réplica / recreación
-            </span>
-          )}
-          <h1 className="mt-3 font-heading text-3xl font-semibold text-white">
+          <h1 className="font-heading text-3xl font-semibold text-white">
             {car.titulo}
           </h1>
           <p className="mt-4 text-3xl font-semibold text-rs-red">

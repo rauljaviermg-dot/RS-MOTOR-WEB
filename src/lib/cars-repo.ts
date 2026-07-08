@@ -14,7 +14,6 @@ type CarDoc = {
   fotos: string[] | null;
   destacado: boolean;
   tipo: "stock" | "transporter";
-  esReplica: boolean;
 };
 
 function mapDoc(doc: CarDoc): Car {
@@ -31,7 +30,6 @@ function mapDoc(doc: CarDoc): Car {
     fotos: doc.fotos ?? [],
     destacado: doc.destacado,
     tipo: doc.tipo,
-    esReplica: doc.esReplica,
   };
 }
 
