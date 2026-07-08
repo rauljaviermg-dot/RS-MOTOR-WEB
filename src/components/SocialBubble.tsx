@@ -21,6 +21,16 @@ export default function SocialBubble() {
           <path d="M16.5 3c.4 2 1.8 3.5 3.8 3.8v2.9c-1.4 0-2.7-.4-3.8-1.2v6.4a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v2.9a2.8 2.8 0 1 0 1.9 2.7V3h2.9Z" />
         </svg>
       </a>
+      <a
+        href="#"
+        aria-label="Wallapop"
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-[#00D67D] text-white shadow-sm transition-transform hover:scale-110"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+          <path d="M6 8h12l-1 12H7L6 8Z" strokeLinejoin="round" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" strokeLinecap="round" />
+        </svg>
+      </a>
     </div>
   );
 }
