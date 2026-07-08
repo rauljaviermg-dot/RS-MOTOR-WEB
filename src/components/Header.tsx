@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import TranslateWidget from "./TranslateWidget";
 
 const links = [
   { href: "/", label: "Inicio" },
@@ -49,6 +50,9 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
           )}
         </nav>
         <div className="flex items-center gap-3">
+          <div className="hidden sm:block">
+            <TranslateWidget />
+          </div>
           <a
             href="tel:+34900000000"
             className="rounded-md border border-rs-red px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-rs-red"

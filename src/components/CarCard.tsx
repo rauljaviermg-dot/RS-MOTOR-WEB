@@ -20,7 +20,8 @@ export default function CarCard({ car }: { car: Car }) {
       <div className="p-4">
         <h3 className="font-heading text-lg font-medium text-white">{car.titulo}</h3>
         <p className="mt-1 text-sm text-rs-muted">
-          {car.km === 0 ? "Kilómetro 0" : `${car.km.toLocaleString("es-ES")} km`} · {car.motor}
+          {car.anio} · {car.km === 0 ? "Kilómetro 0" : `${car.km.toLocaleString("es-ES")} km`} ·{" "}
+          {car.motor}
         </p>
         <p className="mt-3 text-xl font-semibold text-rs-red">
           {car.precio.toLocaleString("es-ES")} €

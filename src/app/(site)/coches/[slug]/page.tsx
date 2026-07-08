@@ -30,6 +30,10 @@ export default async function CocheDetailPage({
 
           <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-rs-gray-light pt-6 text-sm">
             <div>
+              <dt className="text-rs-muted">Año</dt>
+              <dd className="mt-1 text-white">{car.anio}</dd>
+            </div>
+            <div>
               <dt className="text-rs-muted">Kilómetros</dt>
               <dd className="mt-1 text-white">
                 {car.km === 0 ? "Kilómetro 0" : car.km.toLocaleString("es-ES")}

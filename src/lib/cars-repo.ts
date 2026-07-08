@@ -7,6 +7,7 @@ type CarDoc = {
   modelo: string;
   titulo: string;
   precio: number;
+  anio: number | null;
   km: number;
   motor: string | null;
   transmision: string | null;
@@ -23,6 +24,7 @@ function mapDoc(doc: CarDoc): Car {
     modelo: doc.modelo,
     titulo: doc.titulo,
     precio: doc.precio,
+    anio: doc.anio ?? new Date().getFullYear(),
     km: doc.km,
     motor: doc.motor ?? "",
     transmision: doc.transmision ?? "",

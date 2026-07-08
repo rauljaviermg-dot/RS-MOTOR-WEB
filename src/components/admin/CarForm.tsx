@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Car } from "@/lib/cars";
+import SubmitButton from "./SubmitButton";
 
 const inputClass =
   "rounded-md border border-rs-gray-light bg-rs-gray px-4 py-2.5 text-white placeholder:text-rs-muted focus:border-rs-red focus:outline-none";
@@ -41,7 +42,7 @@ export default function CarForm({
         <input name="titulo" required defaultValue={car?.titulo} className={inputClass} />
       </label>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <label className="flex flex-col gap-1.5">
           <span className={labelClass}>Precio (€)</span>
           <input
@@ -49,6 +50,16 @@ export default function CarForm({
             name="precio"
             required
             defaultValue={car?.precio}
+            className={inputClass}
+          />
+        </label>
+        <label className="flex flex-col gap-1.5">
+          <span className={labelClass}>Año</span>
+          <input
+            type="number"
+            name="anio"
+            required
+            defaultValue={car?.anio ?? new Date().getFullYear()}
             className={inputClass}
           />
         </label>
@@ -121,12 +132,10 @@ export default function CarForm({
         </label>
       </div>
 
-      <button
-        type="submit"
-        className="mt-2 w-fit rounded-md bg-rs-red px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105"
-      >
-        {car ? "Guardar cambios" : "Crear coche"}
-      </button>
+      <SubmitButton
+        idleLabel={car ? "Guardar cambios" : "Crear coche"}
+        pendingLabel={car ? "Guardando..." : "Subiendo..."}
+      />
     </form>
   );
 }

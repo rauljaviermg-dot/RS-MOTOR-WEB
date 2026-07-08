@@ -4,6 +4,7 @@ export type Car = {
   modelo: string;
   titulo: string;
   precio: number;
+  anio: number;
   km: number;
   motor: string;
   transmision: string;
@@ -20,6 +21,7 @@ export const cars: Car[] = [
     modelo: "Mustang Shelby GT500 (réplica Eleanor)",
     titulo: "Ford Mustang Shelby GT500 — réplica Eleanor",
     precio: 140000,
+    anio: 2026,
     km: 0,
     motor: "V8",
     transmision: "Manual",
