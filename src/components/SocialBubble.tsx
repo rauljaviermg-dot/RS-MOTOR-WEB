@@ -24,11 +24,13 @@ export default function SocialBubble() {
       <a
         href="#"
         aria-label="Wallapop"
-        className="flex h-11 w-11 items-center justify-center rounded-full bg-[#00D67D] text-white shadow-sm transition-transform hover:scale-110"
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#3FE6C9] to-[#00B876] text-white shadow-sm transition-transform hover:scale-110"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-          <path d="M6 8h12l-1 12H7L6 8Z" strokeLinejoin="round" />
-          <path d="M9 8V6a3 3 0 0 1 6 0v2" strokeLinecap="round" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" className="h-5 w-5">
+          <circle cx="9.5" cy="8.5" r="4.3" />
+          <circle cx="14.7" cy="9.3" r="4" />
+          <circle cx="8.2" cy="14.2" r="3.7" />
+          <circle cx="13.6" cy="15" r="3.6" />
         </svg>
       </a>
     </div>
