@@ -19,7 +19,7 @@ export default async function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[80%_15%] opacity-65"
+          className="object-cover object-[80%_15%] opacity-75"
         />
         <RacingStripes className="opacity-70 mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
