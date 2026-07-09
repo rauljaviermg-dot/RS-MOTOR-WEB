@@ -18,7 +18,7 @@ export default async function CocheDetailPage({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2">
         <PhotoGallery fotos={car.fotos} alt={car.titulo} />
         <div>
           <h1 className="font-heading text-3xl font-semibold text-white">
