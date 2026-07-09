@@ -16,12 +16,17 @@ export default function CarForm({
   car?: Car;
 }) {
   const [previews, setPreviews] = useState<string[]>([]);
+  const [existingFotos, setExistingFotos] = useState<string[]>(car?.fotos ?? []);
 
   function handleFotosChange(e: React.ChangeEvent<HTMLInputElement>) {
     setPreviews((prev) => {
       prev.forEach((url) => URL.revokeObjectURL(url));
       return Array.from(e.target.files ?? []).map((file) => URL.createObjectURL(file));
     });
+  }
+
+  function removeExistingFoto(url: string) {
+    setExistingFotos((prev) => prev.filter((foto) => foto !== url));
   }
 
   return (
@@ -96,6 +101,32 @@ export default function CarForm({
           className={inputClass}
         />
       </label>
+
+      {existingFotos.length > 0 && (
+        <div className="flex flex-col gap-1.5">
+          <span className={labelClass}>Fotos actuales</span>
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+            {existingFotos.map((url) => (
+              <div
+                key={url}
+                className="relative aspect-square overflow-hidden rounded-md border border-rs-gray-light"
+              >
+                <input type="hidden" name="fotos_existentes" value={url} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={url} alt="Foto del coche" className="h-full w-full object-cover" />
+                <button
+                  type="button"
+                  aria-label="Quitar foto"
+                  onClick={() => removeExistingFoto(url)}
+                  className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-black/70 text-sm text-white hover:bg-rs-red"
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <label className="flex flex-col gap-1.5">
         <span className={labelClass}>

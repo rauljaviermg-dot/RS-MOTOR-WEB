@@ -83,6 +83,24 @@ async function uploadCarPhotos(formData: FormData): Promise<string[]> {
   return urls;
 }
 
+async function deleteCarPhotos(urls: string[]) {
+  if (urls.length === 0) return;
+
+  const bucket = getAdminBucket();
+  const prefix = `https://storage.googleapis.com/${bucket.name}/`;
+
+  await Promise.all(
+    urls.map(async (url) => {
+      if (!url.startsWith(prefix)) return;
+      try {
+        await bucket.file(url.slice(prefix.length)).delete();
+      } catch {
+        // ya no existe en Storage, ignorar
+      }
+    })
+  );
+}
+
 export async function createCar(formData: FormData) {
   const db = getAdminDb();
 
@@ -122,8 +140,14 @@ export async function updateCar(slug: string, formData: FormData) {
 
   const docRef = snapshot.docs[0].ref;
   const existente = snapshot.docs[0].data();
+  const fotosConservadas = formData.getAll("fotos_existentes").map(String);
   const nuevasFotos = await uploadCarPhotos(formData);
-  const fotosFinales = [...(existente.fotos ?? []), ...nuevasFotos];
+  const fotosFinales = [...fotosConservadas, ...nuevasFotos];
+
+  const fotosEliminadas = ((existente.fotos ?? []) as string[]).filter(
+    (url) => !fotosConservadas.includes(url)
+  );
+  await deleteCarPhotos(fotosEliminadas);
 
   await docRef.update({
     marca: String(formData.get("marca") ?? ""),
