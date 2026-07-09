@@ -6,6 +6,7 @@ type Mensaje = {
   id: string;
   nombre: string;
   telefono: string;
+  email?: string | null;
   mensaje: string;
   createdAt: number;
 };
@@ -43,10 +44,19 @@ export default async function MensajesPage() {
                 {new Date(m.createdAt).toLocaleString("es-ES")}
               </p>
             </div>
-            <a href={`tel:${m.telefono}`} className="text-sm text-rs-red">
-              {m.telefono}
-            </a>
-            {m.mensaje && <p className="mt-2 text-sm text-rs-muted">{m.mensaje}</p>}
+            <div className="flex flex-wrap gap-3">
+              <a href={`tel:${m.telefono}`} className="text-sm text-rs-red">
+                {m.telefono}
+              </a>
+              {m.email && (
+                <a href={`mailto:${m.email}`} className="text-sm text-rs-red">
+                  {m.email}
+                </a>
+              )}
+            </div>
+            {m.mensaje && (
+              <p className="mt-2 whitespace-pre-line text-sm text-rs-muted">{m.mensaje}</p>
+            )}
           </div>
         ))}
       </div>
