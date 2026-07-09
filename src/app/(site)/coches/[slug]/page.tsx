@@ -53,7 +53,9 @@ export default async function CocheDetailPage({
             </div>
           </dl>
 
-          <p className="mt-8 leading-relaxed text-rs-muted">{car.descripcion}</p>
+          <p className="mt-8 whitespace-pre-line leading-relaxed text-rs-muted">
+            {car.descripcion}
+          </p>
 
           <a
             href="/contacto"
