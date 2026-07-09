@@ -24,7 +24,9 @@ export default function SocialBubble() {
         </svg>
       </a>
       <a
-        href="#"
+        href="https://www.wallapop.com/user/hectorr-472977162?_pid=wi&_uid=38659665"
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Wallapop"
         className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#3FE6C9] to-[#00B876] shadow-sm transition-transform hover:scale-110"
       >
