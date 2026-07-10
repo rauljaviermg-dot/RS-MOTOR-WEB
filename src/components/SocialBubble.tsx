@@ -34,6 +34,15 @@ export default function SocialBubble() {
           <Image src="/wallapop.png" alt="Wallapop" fill sizes="24px" className="object-cover" />
         </div>
       </a>
+      <a
+        href="https://wa.me/34622299942"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+        className="relative block h-11 w-11 overflow-hidden rounded-full shadow-sm transition-transform hover:scale-110"
+      >
+        <Image src="/whatsapp.png" alt="WhatsApp" fill sizes="44px" className="object-cover" />
+      </a>
     </div>
   );
 }
