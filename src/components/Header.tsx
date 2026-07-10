@@ -51,7 +51,7 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
         </nav>
         <div className="flex items-center gap-3">
           <a
-            href="tel:+34900000000"
+            href="tel:+34622299942"
             className="rounded-md border border-rs-red px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-rs-red"
           >
             Llamar

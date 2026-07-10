@@ -42,19 +42,22 @@ export default async function ContactoPage({
           </p>
 
           <div className="mt-8 space-y-1">
-            <p className="font-heading text-xl font-semibold text-white">
-              951 234 567
-            </p>
-            <p className="font-heading text-xl font-semibold text-white">
-              612 345 678
-            </p>
-            <p className="font-heading text-xl font-semibold text-white">
-              699 876 543
-            </p>
+            <a
+              href="tel:+34622299942"
+              className="block font-heading text-xl font-semibold text-white hover:text-rs-red"
+            >
+              622 299 942
+            </a>
+            <a
+              href="tel:+34695809026"
+              className="block font-heading text-xl font-semibold text-white hover:text-rs-red"
+            >
+              695 809 026
+            </a>
           </div>
 
           <div className="mt-6 text-rs-muted">
-            <p>info@rsmotormalaga.com</p>
+            <p>hr.garaje67@gmail.com</p>
             <p className="mt-2">
               C. Capitán Marcos García, 6, Bailén-Miraflores
               <br />
