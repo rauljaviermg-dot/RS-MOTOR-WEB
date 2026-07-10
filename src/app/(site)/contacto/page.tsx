@@ -68,7 +68,9 @@ export default async function ContactoPage({
           <div className="mt-6 flex items-center gap-3">
             <span className="text-sm text-rs-muted">Síguenos</span>
             <a
-              href="#"
+              href="https://www.instagram.com/rs_motor_malaga/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-rs-gray-light text-white transition-colors hover:border-rs-red"
             >

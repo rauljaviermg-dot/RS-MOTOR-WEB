@@ -10,7 +10,9 @@ export default function SocialBubble() {
     <div className="fixed bottom-4 left-4 z-40 flex flex-col gap-2">
       <div className={`${open ? "flex" : "hidden"} flex-col gap-2 sm:flex`}>
         <a
-          href="#"
+          href="https://www.instagram.com/rs_motor_malaga/"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Instagram"
           className="flex h-11 w-11 items-center justify-center rounded-full bg-rs-red text-white shadow-sm transition-transform hover:scale-110"
         >
