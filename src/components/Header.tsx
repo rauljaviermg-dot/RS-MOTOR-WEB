@@ -24,7 +24,13 @@ function LinkLabel({ href, label }: { href: string; label: string }) {
   return label;
 }
 
-export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
+export default function Header({
+  isAdmin = false,
+  hasUnread = false,
+}: {
+  isAdmin?: boolean;
+  hasUnread?: boolean;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -44,8 +50,14 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
             </Link>
           ))}
           {isAdmin && (
-            <Link href="/admin" className="text-rs-red transition-colors hover:text-white">
+            <Link
+              href="/admin"
+              className="relative text-rs-red transition-colors hover:text-white"
+            >
               Panel
+              {hasUnread && (
+                <span className="absolute -right-2.5 -top-1 h-2 w-2 rounded-full bg-rs-red" />
+              )}
             </Link>
           )}
         </nav>
@@ -84,9 +96,12 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
             <Link
               href="/admin"
               onClick={() => setOpen(false)}
-              className="py-2 text-rs-red transition-colors hover:text-white"
+              className="relative w-fit py-2 text-rs-red transition-colors hover:text-white"
             >
               Panel
+              {hasUnread && (
+                <span className="absolute -right-2.5 top-2 h-2 w-2 rounded-full bg-rs-red" />
+              )}
             </Link>
           )}
         </nav>

@@ -9,6 +9,7 @@ type Mensaje = {
   email?: string | null;
   mensaje: string;
   createdAt: number;
+  leido?: boolean;
 };
 
 async function getMensajes(): Promise<Mensaje[]> {
@@ -19,8 +20,19 @@ async function getMensajes(): Promise<Mensaje[]> {
   return snapshot.docs.map((doc) => ({ id: doc.id, ...(doc.data() as Omit<Mensaje, "id">) }));
 }
 
+async function markAllAsRead(mensajes: Mensaje[]) {
+  const sinLeer = mensajes.filter((m) => !m.leido);
+  if (sinLeer.length === 0) return;
+
+  const db = getAdminDb();
+  const batch = db.batch();
+  sinLeer.forEach((m) => batch.update(db.collection("mensajes").doc(m.id), { leido: true }));
+  await batch.commit();
+}
+
 export default async function MensajesPage() {
   const mensajes = await getMensajes();
+  await markAllAsRead(mensajes);
 
   return (
     <div>
