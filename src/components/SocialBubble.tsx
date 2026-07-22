@@ -23,7 +23,9 @@ export default function SocialBubble() {
           </svg>
         </a>
         <a
-          href="#"
+          href="https://www.tiktok.com/@rsmotormalaga"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="TikTok"
           className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-sm transition-transform hover:scale-110"
         >
