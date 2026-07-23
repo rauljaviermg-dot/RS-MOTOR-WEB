@@ -122,6 +122,7 @@ export async function createCar(formData: FormData) {
     fotos: nuevasFotos,
     destacado: formData.get("destacado") === "on",
     tipo: String(formData.get("tipo") ?? "stock"),
+    estado: "disponible",
     createdAt: Date.now(),
   });
 
@@ -168,6 +169,25 @@ export async function updateCar(slug: string, formData: FormData) {
   revalidatePath("/coches");
   revalidatePath(`/coches/${slug}`);
   redirect("/admin");
+}
+
+export async function setCarEstado(
+  slug: string,
+  estado: "disponible" | "reservado" | "vendido"
+) {
+  await requireSession();
+
+  const db = getAdminDb();
+  const snapshot = await db.collection("cars").where("slug", "==", slug).limit(1).get();
+
+  if (!snapshot.empty) {
+    await snapshot.docs[0].ref.update({ estado });
+  }
+
+  revalidatePath("/");
+  revalidatePath("/coches");
+  revalidatePath(`/coches/${slug}`);
+  revalidatePath("/transporters");
 }
 
 export async function deleteCar(slug: string) {

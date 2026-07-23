@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getCars } from "@/lib/cars-repo";
-import { deleteCar } from "@/app/admin/actions";
+import { deleteCar, setCarEstado } from "@/app/admin/actions";
+
+const ESTADOS = [
+  { valor: "disponible", etiqueta: "Disponible" },
+  { valor: "reservado", etiqueta: "Reservado" },
+  { valor: "vendido", etiqueta: "Vendido" },
+] as const;
 
 export const dynamic = "force-dynamic";
 
@@ -48,6 +54,32 @@ export default async function AdminDashboardPage() {
                 {car.precio.toLocaleString("es-ES")} € ·{" "}
                 {car.destacado ? "Destacado" : "No destacado"}
               </p>
+              <div className="mt-2 flex gap-1.5">
+                {ESTADOS.map(({ valor, etiqueta }) => {
+                  const activo = (car.estado ?? "disponible") === valor;
+                  return (
+                    <form
+                      key={valor}
+                      action={async () => {
+                        "use server";
+                        await setCarEstado(car.slug, valor);
+                      }}
+                    >
+                      <button
+                        type="submit"
+                        disabled={activo}
+                        className={
+                          activo
+                            ? "rounded-full bg-rs-red px-3 py-1 text-xs font-semibold text-white"
+                            : "rounded-full border border-rs-gray-light px-3 py-1 text-xs text-rs-muted transition-colors hover:border-white hover:text-white"
+                        }
+                      >
+                        {etiqueta}
+                      </button>
+                    </form>
+                  );
+                })}
+              </div>
             </div>
             <Link
               href={`/admin/${car.slug}/editar`}

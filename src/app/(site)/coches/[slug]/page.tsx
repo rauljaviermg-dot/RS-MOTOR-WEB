@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getCarBySlug } from "@/lib/cars-repo";
 import PhotoGallery from "@/components/PhotoGallery";
+import EstadoBadge from "@/components/EstadoBadge";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +20,10 @@ export default async function CocheDetailPage({
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
       <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2">
-        <PhotoGallery fotos={car.fotos} alt={car.titulo} />
+        <div className="relative overflow-hidden rounded-lg">
+          <EstadoBadge estado={car.estado} />
+          <PhotoGallery fotos={car.fotos} alt={car.titulo} />
+        </div>
         <div>
           <h1 className="font-heading text-3xl font-semibold text-white">
             {car.titulo}

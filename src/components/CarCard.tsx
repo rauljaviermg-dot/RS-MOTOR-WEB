@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Car } from "@/lib/cars";
+import EstadoBadge from "@/components/EstadoBadge";
 
 export default function CarCard({ car }: { car: Car }) {
   return (
@@ -9,6 +10,7 @@ export default function CarCard({ car }: { car: Car }) {
       className="group block overflow-hidden rounded-lg border border-rs-gray-light bg-rs-gray transition-colors hover:border-rs-red"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
+        <EstadoBadge estado={car.estado} />
         <Image
           src={car.fotos[0]}
           alt={car.titulo}

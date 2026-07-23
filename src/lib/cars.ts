@@ -12,6 +12,7 @@ export type Car = {
   fotos: string[];
   destacado: boolean;
   tipo: "stock" | "transporter";
+  estado: "disponible" | "reservado" | "vendido";
 };
 
 export const cars: Car[] = [
@@ -34,6 +35,7 @@ export const cars: Car[] = [
     ],
     destacado: true,
     tipo: "stock",
+    estado: "disponible",
   },
 ];
 
